@@ -71,7 +71,11 @@ nvidia-docker run -it -v /mnt:/mnt --ipc=host --net=host <CONTAINER_NAME> /bin/b
 
 #### Image Classification
 All image classification experiments are run using the ImageNet ILSVC 2012 dataset.
-This can be downloaded using the following command (within the docker container above),
+Url of ImageNet is removed as it has been deprecated by pytorch.
+(See [ msr-fiddle/pipedream#19](https://github.com/msr-fiddle/pipedream/issues/19) for detail.)
+Users can download the ImageNet manually
+([https://image-net.org/challenges/LSVRC/2012/](https://image-net.org/challenges/LSVRC/2012/)),
+and use the scripts to preprocess the dataset and organize the folder.
 
 ```bash
 cd scripts; python download_imagenet.py --data_dir <DATASET_DIR>
